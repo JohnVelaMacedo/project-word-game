@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import GameBanner from './GameBanner';
 
-function GameForm({ handleAddList, statusGame, guesses, answer }) {
+function GameForm({ handleAddList, statusGame }) {
   const [text, setText] = useState('');
 
   function handleSubmit(e) {
@@ -18,11 +17,7 @@ function GameForm({ handleAddList, statusGame, guesses, answer }) {
       autoComplete='off'
     >
       <label htmlFor='guess-input'>Enter guess:</label>
-      <GameBanner
-        statusGame={statusGame}
-        guesses={guesses}
-        answer={answer}
-      />
+
       <input
         id='guess-input'
         type='text'
